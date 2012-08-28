@@ -26,5 +26,5 @@ GMAP_JQUERY_UI = getattr(settings, 'GMAP_JQUERY_UI',
 GMAP_JQUERY_UI_CSS = getattr(settings, 'GMAP_JQUERY_UI_CSS', 
                              'http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/smoothness/jquery-ui.css')
 
-GMAP_API = getattr(settings, 'GMAP_API', 'http://maps.google.com/maps/api/js?sensor=false')
-GMAP_DEFAULT = getattr(settings, 'GMAP_DEFAULT', [-34.397, 150.644])
+GMAP_API = getattr(settings, 'GMAP_API', 'https://maps.google.com/maps/api/js?sensor=false')
+GMAP_DEFAULT = getattr(settings, 'GMAP_DEFAULT', [12.138523,-86.251358])

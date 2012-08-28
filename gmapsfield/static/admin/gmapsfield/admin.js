@@ -31,7 +31,7 @@
 		$(".google-map[type=text]").live("initialize-map", function(evt, data) {
 			var map, data, orig = $(this), clone = orig.clone(true).attr("type", "hidden"), defaults = {
 				size : ["500px", "400px"],
-				coordinates : [-44.185408825666336, -68.983685546875],
+				coordinates : [12.138523,-86.251358],
 				zoom : 8,
 				markers : [],
 				frozen : false
