@@ -11,7 +11,8 @@ from conf import settings
 class GoogleMapsFormWidget(widgets.Widget):
 
     class Media:
-        js = ('http://maps.google.com/maps/api/js?sensor=true', 
+        js = ( 
+              settings.GMAP_API, 
               settings.GMAP_JQUERY, 
               settings.GMAP_JQUERY_UI, 
               settings.STATIC_URL + 'admin/gmapsfield/admin.js',
