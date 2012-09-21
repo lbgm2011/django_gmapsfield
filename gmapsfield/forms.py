@@ -3,7 +3,7 @@ from django.template import Context, loader
 from conf import settings
 
 #===============================================================================
-# Avoid jQuery to be loaded twice if it's there 
+# Avoid jQuery to be loaded twice if it's there
 #===============================================================================
 
 
@@ -11,10 +11,10 @@ from conf import settings
 class GoogleMapsFormWidget(widgets.Widget):
 
     class Media:
-        js = ( 
-              settings.GMAP_API, 
-              settings.GMAP_JQUERY, 
-              settings.GMAP_JQUERY_UI, 
+        js = (
+              settings.GMAP_API,
+              settings.GMAP_JQUERY,
+              settings.GMAP_JQUERY_UI,
               settings.STATIC_URL + 'admin/gmapsfield/admin.js',
               settings.STATIC_URL + 'admin/gmapsfield/json2.js',)
 
@@ -27,6 +27,7 @@ class GoogleMapsFormWidget(widgets.Widget):
         self.inner_widget = widgets.HiddenInput()
 
     def render(self, name, value, *args, **kwargs):
+        value = '' if value is None else value
         template = loader.get_template("admin.html")
         context = Context({ "name": name, "value": value })
 
